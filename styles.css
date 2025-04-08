@@ -11,8 +11,8 @@
 /* CSS Variables */
 :root {
     --font-family: 'Khmer OS';
-    --padding: 15px;
-    --margin: 100px;
+    --padding: 10px;
+    --margin: 10px;
     --primary-color: #3498db;
     --secondary-color: #2ecc71;
 }
@@ -21,11 +21,7 @@
 body {
     font-family: var(--font-family);
     text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
+    margin-top:500px;
     background-color: #f0f0f0; /* Add a background color */
     background-image: url('path_to_your_image.jpg'); /* Add a background image */
     background-size: cover; /* Make the background image cover the entire area */
@@ -60,8 +56,7 @@ button:hover {
 /* Responsive Design */
 @media (max-width: 600px) {
     body {
-        flex-direction: column;
-        justify-content: center;
+        margin-top: 200px;
     }
 
     input, button {
@@ -74,9 +69,9 @@ button:hover {
     }
 }
 
-@media (min-width: 601px) and (max-width: 1024px) {
+@media (min-width: 601px) and (max-width: 800px) {
     body {
-        margin-top: 80px;
+        margin-top: 100px;
     }
 
     .container {
