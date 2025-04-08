@@ -1,5 +1,6 @@
 const customers = {
-"3689773": { name: "AIC|3689773 ម៉ាក់ ", tickets: 1 },
+    "3689773": { name: "AIC|3689773 ម៉ាក់ ", tickets: 1 }
+};
 
 function searchTickets() {
     const customerId = document.getElementById('customerId').value.trim(); // Sanitize input
