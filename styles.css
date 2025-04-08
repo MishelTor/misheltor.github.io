@@ -12,44 +12,46 @@
 :root {
     --font-family: 'Khmer OS';
     --padding: 10px;
-    --margin: 50px;
+    --margin: 10px;
     --primary-color: #3498db;
     --secondary-color: #2ecc71;
 }
+@@ -56,7 +56,7 @@
+/* Responsive Design */
+@media (max-width: 600px) {
+    body {
+        margin-top: 200px;
+    }
 
-/* General Styles */
-body {
-    font-family: var(--font-family);
-    text-align: center;
-    margin-top: 500px;
-    background-color: #f0f0f0; /* Add a background color */
-    background-image: url('path_to_your_image.jpg'); /* Add a background image */
-    background-size: cover; /* Make the background image cover the entire area */
-    background-repeat: no-repeat; /* Prevent the background image from repeating */
-    background-position: center; /* Center the background image */
-    padding: 30px; /* Add padding to ensure content doesn't touch the edges */
+    input, button {
+@@ -69,30 +69,30 @@
+    }
 }
 
-/* Input and Button Styles */
-input, button {
-    padding: var(--padding);
-    margin: var(--margin);
-    border: 1px solid var(--primary-color);
-    border-radius: 4px;
+@media (min-width: 601px) and (max-width: 800px) {
+    body {
+        margin-top: 100px;
+    }
+
+    .container {
+        padding: 20px; /* Adjust padding for tablet */
+    }
 }
 
-button {
-    background-color: var(--primary-color);
-    color: #fff;
-    cursor: pointer;
+/* Flexbox Layout Example */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-button:hover {
-    background-color: var(--secondary-color);
+.item {
+    flex: 1 1 100%;
+    margin: 10px;
 }
 
-/* Result Styles */
-#result {
-    margin-top: 20px;
-    font-size: 1.2em;
-
+@media (min-width: 601px) {
+    .item {
+        flex: 1 1 45%;
+    }
+}
