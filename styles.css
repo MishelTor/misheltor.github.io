@@ -1,15 +1,58 @@
+/* Normalize CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS Variables */
+:root {
+    --font-family: Arial, sans-serif;
+    --padding: 10px;
+    --margin: 10px;
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+}
+
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: var(--font-family);
     text-align: center;
     margin-top: 50px;
 }
 
+/* Input and Button Styles */
 input, button {
-    padding: 10px;
-    margin: 10px;
+    padding: var(--padding);
+    margin: var(--margin);
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
 }
 
+button {
+    background-color: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Result Styles */
 #result {
     margin-top: 20px;
     font-size: 1.2em;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    body {
+        margin-top: 20px;
+    }
+
+    input, button {
+        width: 100%;
+        max-width: 300px;
+    }
 }
