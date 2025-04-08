@@ -12,7 +12,7 @@
 :root {
     --font-family: 'Khmer OS';
     --padding: 15px;
-    --margin: 15px;
+    --margin: 100px;
     --primary-color: #3498db;
     --secondary-color: #2ecc71;
 }
@@ -56,7 +56,7 @@ button:hover {
 /* Responsive Design */
 @media (max-width: 600px) {
     body {
-        margin-top: 20px;
+        margin-top: 250px;
     }
 
     input, button {
