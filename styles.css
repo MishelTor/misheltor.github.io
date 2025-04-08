@@ -1,3 +1,6 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Khmer+OS&display=swap');
+
 /* Normalize CSS */
 * {
     margin: 0;
@@ -5,12 +8,9 @@
     box-sizing: border-box;
 }
 
-/* Import Khmer Font */
-@import url('https://fonts.googleapis.com/css2?family=Battambang:wght@400;700&display=swap');
-
 /* CSS Variables */
 :root {
-    --font-family: Battambang;
+    --font-family: 'Khmer OS', Arial, sans-serif;
     --padding: 10px;
     --margin: 10px;
     --primary-color: #3498db;
@@ -22,6 +22,11 @@ body {
     font-family: var(--font-family);
     text-align: center;
     margin-top: 50px;
+    background-color: #f0f0f0; /* Add a background color */
+    background-image: url('path_to_your_image.jpg'); /* Add a background image */
+    background-size: cover; /* Make the background image cover the entire area */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    background-position: center; /* Center the background image */
 }
 
 /* Input and Button Styles */
@@ -57,5 +62,43 @@ button:hover {
     input, button {
         width: 100%;
         max-width: 300px;
+    }
+
+    h1 {
+        font-size: 1.5em; /* Adjust font size for mobile */
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    body {
+        margin-top: 30px;
+    }
+
+    .container {
+        padding: 20px; /* Adjust padding for tablet */
+    }
+}
+
+/* Flexbox Layout Example */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.item {
+    flex: 1 1 100%;
+    margin: 10px;
+}
+
+@media (min-width: 601px) {
+    .item {
+        flex: 1 1 45%;
+    }
+}
+
+@media (min-width: 1025px) {
+    .item {
+        flex: 1 1 30%;
     }
 }
