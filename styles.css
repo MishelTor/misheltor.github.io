@@ -27,7 +27,7 @@ body {
     background-size: cover; /* Make the background image cover the entire area */
     background-repeat: no-repeat; /* Prevent the background image from repeating */
     background-position: center; /* Center the background image */
-    padding: 20px; /* Add padding to ensure content doesn't touch the edges */
+    padding: 30px; /* Add padding to ensure content doesn't touch the edges */
 }
 
 /* Input and Button Styles */
@@ -52,10 +52,4 @@ button:hover {
 #result {
     margin-top: 20px;
     font-size: 1.2em;
-}
 
-/* Responsive Design */
-@media (max-width: 400px) {
-    body {
-       *
-
