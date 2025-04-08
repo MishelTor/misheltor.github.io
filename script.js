@@ -5,11 +5,11 @@ const customers = {
 };
 
 function searchTickets() {
-    const customerId = document.getElementById('customerId').value;
+    const customerId = document.getElementById('customerId').value.trim(); // Sanitize input
     const resultDiv = document.getElementById('result');
     if (customers[customerId]) {
         const customer = customers[customerId];
-        resultDiv.textContent = Customer Name: ${customer.name}, Lucky Draw Tickets: ${customer.tickets};
+        resultDiv.textContent = `Customer Name: ${customer.name}, Lucky Draw Tickets: ${customer.tickets}`;
     } else {
         resultDiv.textContent = 'Customer ID not found';
     }
