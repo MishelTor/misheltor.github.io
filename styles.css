@@ -12,7 +12,7 @@
 :root {
     --font-family: 'Khmer OS';
     --padding: 10px;
-    --margin: 10px;
+    --margin: 50px;
     --primary-color: #3498db;
     --secondary-color: #2ecc71;
 }
@@ -54,13 +54,13 @@ button:hover {
 }
 
 /* Responsive Design */
-@media (max-width: 150px) {
+@media (max-width: 400px) {
     body {
         margin-top: 200px;
     }
 
     input, button {
-        width: 100%;
+        width: 90%;
         max-width: 300px;
     }
 
@@ -69,13 +69,13 @@ button:hover {
     }
 }
 
-@media (min-width: 150px) and (max-width: 300px) {
+@media (min-width: 601px) and (max-width: 900px) {
     body {
         margin-top: 100px;
     }
 
     .container {
-        padding: 20px; /* Adjust padding for tablet */
+        padding: 100px; /* Adjust padding for tablet */
     }
 }
 
