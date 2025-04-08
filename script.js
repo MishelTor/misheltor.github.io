@@ -1,19 +1,16 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const customers = {
-        "C001": 5,
-        "C002": 10,
-        "C003": 3
-    };
+const customers = {
+    "C001": { name: "John Doe", tickets: 5 },
+    "C002": { name: "Jane Smith", tickets: 10 },
+    "C003": { name: "Alice Johnson", tickets: 3 }
+};
 
-    function searchTickets() {
-        const customerId = document.getElementById('customerId').value;
-        const resultDiv = document.getElementById('result');
-        if (customers[customerId]) {
-            resultDiv.textContent = `Lucky Draw Tickets: ${customers[customerId]}`;
-        } else {
-            resultDiv.textContent = 'Customer ID not found';
-        }
+function searchTickets() {
+    const customerId = document.getElementById('customerId').value;
+    const resultDiv = document.getElementById('result');
+    if (customers[customerId]) {
+        const customer = customers[customerId];
+        resultDiv.textContent = Customer Name: ${customer.name}, Lucky Draw Tickets: ${customer.tickets};
+    } else {
+        resultDiv.textContent = 'Customer ID not found';
     }
-
-    window.searchTickets = searchTickets; // Make the function accessible globally
-});
+}
