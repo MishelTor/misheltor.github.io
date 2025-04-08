@@ -10,7 +10,7 @@
 
 /* CSS Variables */
 :root {
-    --font-family: 'Battambang', Arial, sans-serif;
+    --font-family: Battambang;
     --padding: 10px;
     --margin: 10px;
     --primary-color: #3498db;
