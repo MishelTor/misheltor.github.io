@@ -5,12 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lucky Draw Ticket Search</title>
     <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Search for your lucky draw tickets by entering your customer ID.">
+    <meta property="og:title" content="Lucky Draw Ticket Search">
+    <meta property="og:description" content="Search for your lucky draw tickets by entering your customer ID.">
+    <meta property="og:type" content="website">
 </head>
 <body>
-    <h1>Lucky Draw Ticket Search</h1>
-    <input type="text" id="customerId" placeholder="Enter Customer ID">
-    <button onclick="searchTickets()">Search</button>
-    <div id="result"></div>
+    <header>
+        <h1>Lucky Draw Ticket Search</h1>
+    </header>
+    <main>
+        <form onsubmit="searchTickets(); return false;">
+            <label for="customerId">Enter Customer ID:</label>
+            <input type="text" id="customerId" placeholder="Enter Customer ID" aria-label="Customer ID">
+            <button type="submit">Search</button>
+        </form>
+        <div id="result" aria-live="polite"></div>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
