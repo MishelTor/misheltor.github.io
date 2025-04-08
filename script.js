@@ -8133,8 +8133,8 @@ function searchTickets() {
     const resultDiv = document.getElementById('result');
     if (customers[customerId]) {
         const customer = customers[customerId];
-        resultDiv.textContent = `Customer Name: ${customer.name}, Lucky Draw Tickets: ${customer.tickets}`;
+        resultDiv.textContent = `ឈ្មោះតូប: ${customer.name},ចំនួនសន្លឹកឆ្នោត: ${customer.tickets}`;
     } else {
-        resultDiv.textContent = 'Customer ID not found';
+        resultDiv.textContent = 'លេខតូបIDមិនត្រឹមត្រូវ';
     }
 }
