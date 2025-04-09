@@ -1,11 +1,16 @@
 import pandas as pd
+import requests
 from flask import Flask, request, jsonify, render_template
+from io import BytesIO
 
 app = Flask(__name__)
 
-# Load Excel file
+# Load Excel file from GitHub
+excel_url = "https://github.com/MishelTor/misheltor.github.io/raw/main/Website2/CustomerID.xlsx"
 try:
-    df = pd.read_excel(r'D:\Website2\CustomerID.xlsx', engine='openpyxl')
+    response = requests.get(excel_url)
+    response.raise_for_status()  # Check if the request was successful
+    df = pd.read_excel(BytesIO(response.content), engine='openpyxl')
 except Exception as e:
     print(f"Error loading Excel file: {e}")
     df = pd.DataFrame()
